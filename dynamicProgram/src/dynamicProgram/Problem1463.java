@@ -1,7 +1,10 @@
 package dynamicProgram;
 
 import java.util.Scanner;
-
+/*
+ * 1로 만들기
+ * https://www.acmicpc.net/problem/1463
+ */
 public class Problem1463 {
 	static int[] d;
 	static int[] u;
