@@ -1,0 +1,64 @@
+package dynamicProgram;
+
+import java.util.Scanner;
+
+public class Problem1463 {
+	static int[] d;
+	static int[] u;
+	
+	
+	public static int topDown(int n) {
+		System.out.printf("현재 n은 %d입니다. \n", n);
+		
+		if(n==1) {
+			System.out.println("n==1이므로 종료");
+			return 0;
+		}
+		if(d[n]>0)  return d[n];
+		d[n]=topDown(n-1)+1;
+		if(n%2==0) {
+			int temp = topDown(n/2) + 1;
+			if (d[n] >temp) {
+				System.out.println(n+"일 때 2로 나눔");
+				d[n]=temp;			
+			}
+		}
+		if(n%3==0) {
+			int temp = topDown(n/3)+1;
+			if(d[n]>temp) {
+				System.out.println(n+"일 때 3으로 나눔");
+				d[n]=temp;
+			}
+		}
+		
+		return d[n];
+	}
+	
+	public static void bottomUp(int n) {
+		u[1] = 0;
+		for(int i =2 ; i<=n ; i++) {
+			u[i]=u[i-1]+1;
+			if(i%2==0 && u[i]>u[i/2]+1) {
+				System.out.println(i+"일 때 2로 나눔");
+				u[i]=u[i/2]+1;				
+			}
+			if(i%3==0 && u[i]>u[i/3] +1 ) {
+				System.out.println(i+"일 때 3로 나눔");
+				u[i]=u[i/3]+1;
+			}
+		}		
+	}
+	
+	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		int n = sc.nextInt();
+		int n = 10;
+		d = new int[n+1];
+		u = new int[n+1];
+		System.out.println(topDown(n));
+		bottomUp(n);
+		System.out.println(u[n]);
+		
+	}
+}
+

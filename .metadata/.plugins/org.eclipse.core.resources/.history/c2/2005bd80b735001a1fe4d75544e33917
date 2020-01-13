@@ -1,0 +1,8 @@
+package dynamicProgram;
+
+public class Problem1463 {
+	public static void main(String[] args) {
+		
+		System.out.println("Zz");
+	}
+}
