@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Problem2579 {
 
 	/*
-	 * 계단 오르기
+	 * 제곱수의 합
 	 * https://www.acmicpc.net/problem/2579
 	 */	
 	
