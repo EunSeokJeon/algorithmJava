@@ -10,7 +10,7 @@ public class Problem2011 {
 	 */	
 
 	
-	
+	//D[i]=i번째 문자까지 해석했을 때, 나올 수 있는 해석으 ㅣ가짓 수
 	public static int mod = 1000000;
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);

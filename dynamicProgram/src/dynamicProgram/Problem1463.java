@@ -52,14 +52,14 @@ public class Problem1463 {
 	}
 	
 	public static void main(String[] args) {
-//		Scanner sc = new Scanner(System.in);
-//		int n = sc.nextInt();
-		int n = 10;
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
 		d = new int[n+1];
 		u = new int[n+1];
 		System.out.println(topDown(n));
-		//bottomUp(n);
-		//System.out.println(u[n]);
+//		bottomUp(n);
+//		System.out.println(u[n]);
 		
 	}
 }
