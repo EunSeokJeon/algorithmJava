@@ -1,6 +1,14 @@
 package myDynamicProgram;
 
 import java.util.Scanner;
+
+/*
+ * 피보나치 함수
+ * https://www.acmicpc.net/problem/1003
+ */	
+
+
+
 public class Problem1003 {
     static int[][] res = new int[41][2];
     public static void main(String[] args) {
